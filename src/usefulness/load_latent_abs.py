@@ -28,6 +28,8 @@ class LoadLatentFromAbs:
         if "latent_format_version_0" not in latent:
             multiplier = 1.0 / 0.18215
         samples = {"samples": latent["latent_tensor"].float() * multiplier}
+
+        # Include a random integer to force downstream nodes to refresh
         return (samples, random.randint(0, 2**31 - 1))
 
     @classmethod
