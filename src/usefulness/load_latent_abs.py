@@ -1,6 +1,5 @@
-import os
+from pathlib import Path
 import random
-import folder_paths
 import hashlib
 import safetensors.torch
 
@@ -20,10 +19,11 @@ class LoadLatentFromAbs:
 
     def load_latent(self, latent_path):
         # Check if path exists
-        if not os.path.exists(latent_path):
-            raise ValueError(f"Latent file not found at path: {latent_path}")
+        path = Path(latent_path)
+        if not path.exists():
+            raise ValueError(f"Latent file not found at path: {path}")
 
-        latent = safetensors.torch.load_file(latent_path, device="cpu")
+        latent = safetensors.torch.load_file(path, device="cpu")
         multiplier = 1.0
         if "latent_format_version_0" not in latent:
             multiplier = 1.0 / 0.18215
@@ -34,14 +34,5 @@ class LoadLatentFromAbs:
 
     @classmethod
     def IS_CHANGED(s, latent_path):
-        image_path = folder_paths.get_annotated_filepath(latent_path)
         m = hashlib.sha256()
-        with open(image_path, "rb") as f:
-            m.update(f.read())
         return m.digest().hex()
-
-    @classmethod
-    def VALIDATE_INPUTS(s, latent_path):
-        if not folder_paths.exists_annotated_filepath(latent_path):
-            return "Invalid latent file: {}".format(latent_path)
-        return True
