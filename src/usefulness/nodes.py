@@ -2,6 +2,8 @@ from .model_switcher import ModelSwitcher
 from .load_latent import LoadLatentFromOutput
 from .load_latent_abs import LoadLatentFromAbs
 from .save_latent_abs import SaveLatentToAbs
+from .save_string_abs import SaveStringToAbs
+from .load_string_abs import LoadStringFromAbs
 from .select_latent import LatentSelector
 from .wan_latent_loader import WanLatentImageToVideo
 from .wan_latent_loader_b import WanImageToVideoAlt
@@ -21,7 +23,9 @@ NODE_CLASS_MAPPINGS = {
     "UFNLatentPadder": LatentPadder,
     "UFNConcatLatent": ContatenatedLatent,
     "UFNGradualColorMix": GradualColorMix,
-    "UFNSaveLatentToAbsolutePath": SaveLatentToAbs
+    "UFNSaveLatentToAbsolutePath": SaveLatentToAbs,
+    "UFNSaveStringToAbsolutePath": SaveStringToAbs,
+    "UFNLoadStringFromAbsolutePath": LoadStringFromAbs
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -35,5 +39,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNLatentPadder": "UFN Latent Padder",
     "UFNConcatLatent": "UFN Concatenate Latent",
     "UFNGradualColorMix": "UFN Gradual Color Mix",
-    "UFNSaveLatentToAbsolutePath": "UFN Save Latent (Absolute Path)"
+    "UFNSaveLatentToAbsolutePath": "UFN Save Latent (Absolute Path)",
+    "UFNSaveStringToAbsolutePath": "UFN Save String (Absolute Path)",
+    "UFNLoadStringFromAbsolutePath": "UFN Load String (Absolute Path)"
 }
