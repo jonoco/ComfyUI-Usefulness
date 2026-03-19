@@ -26,7 +26,7 @@ class SaveLatentToAbs:
             os.makedirs(directory, exist_ok=True)
 
         # Prepare tensors for saving
-        latent_tensor = samples["samples"]
+        latent_tensor = samples["samples"].contiguous()
         tensors = {
             "latent_tensor": latent_tensor,
             "latent_format_version_0": torch.tensor([]),
