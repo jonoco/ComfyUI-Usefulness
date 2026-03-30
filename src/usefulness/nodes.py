@@ -6,9 +6,13 @@ from .parse_json_array import ParseJSONArray
 from .concat_json_array import ConcatJSONArray
 from .array_to_json_dict import ArrayToJSONDict
 from .slice_json_array import SliceJSONArray
+from .get_string_from_array import GetStringFromJSONArray
+from .get_int_from_array import GetIntFromJSONArray
+from .get_float_from_array import GetFloatFromJSONArray
 from .load_images_abs import LoadImagesFromAbs
 from .save_audio_abs import SaveAudioToAbs
 from .load_audio_abs import LoadAudioFromAbs
+from .load_audio_single import LoadSingleAudioFromAbs
 from .save_string_abs import SaveStringToAbs
 from .load_string_abs import LoadStringFromAbs
 from .select_latent import LatentSelector
@@ -37,9 +41,13 @@ NODE_CLASS_MAPPINGS = {
     "UFNLoadImagesFromAbsolutePath": LoadImagesFromAbs,
     "UFNSaveAudioToAbsolutePath": SaveAudioToAbs,
     "UFNLoadAudioFromAbsolutePath": LoadAudioFromAbs,
+    "UFNLoadSingleAudioFromAbsolutePath": LoadSingleAudioFromAbs,
     "UFNConcatJSONArray": ConcatJSONArray,
     "UFNArrayToJSONDict": ArrayToJSONDict,
-    "UFNSliceJSONArray": SliceJSONArray
+    "UFNSliceJSONArray": SliceJSONArray,
+    "UFNGetStringFromJSONArray": GetStringFromJSONArray,
+    "UFNGetIntFromJSONArray": GetIntFromJSONArray,
+    "UFNGetFloatFromJSONArray": GetFloatFromJSONArray
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -60,7 +68,11 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNLoadImagesFromAbsolutePath": "UFN Load Images (Absolute Path)",
     "UFNSaveAudioToAbsolutePath": "UFN Save Audio (Absolute Path)",
     "UFNLoadAudioFromAbsolutePath": "UFN Load Audio (Absolute Path)",
+    "UFNLoadSingleAudioFromAbsolutePath": "UFN Load Single Audio (Absolute Path)",
     "UFNConcatJSONArray": "UFN Concatenate JSON Arrays",
     "UFNArrayToJSONDict": "UFN Array to JSON Dict",
-    "UFNSliceJSONArray": "UFN Slice JSON Array"
+    "UFNSliceJSONArray": "UFN Slice JSON Array",
+    "UFNGetStringFromJSONArray": "UFN Get String from JSON Array",
+    "UFNGetIntFromJSONArray": "UFN Get Int from JSON Array",
+    "UFNGetFloatFromJSONArray": "UFN Get Float from JSON Array"
 }
