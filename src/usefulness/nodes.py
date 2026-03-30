@@ -3,7 +3,11 @@ from .load_latent_abs import LoadLatentFromAbs
 from .save_latent_abs import SaveLatentToAbs
 from .save_images_abs import SaveImagesToAbs
 from .parse_json_array import ParseJSONArray
+from .concat_json_array import ConcatJSONArray
+from .array_to_json_dict import ArrayToJSONDict
 from .load_images_abs import LoadImagesFromAbs
+from .save_audio_abs import SaveAudioToAbs
+from .load_audio_abs import LoadAudioFromAbs
 from .save_string_abs import SaveStringToAbs
 from .load_string_abs import LoadStringFromAbs
 from .select_latent import LatentSelector
@@ -29,7 +33,11 @@ NODE_CLASS_MAPPINGS = {
     "UFNLoadStringFromAbsolutePath": LoadStringFromAbs,
     "UFNSaveImagesToAbsolutePath": SaveImagesToAbs,
     "UFNParseJSONArray": ParseJSONArray,
-    "UFNLoadImagesFromAbsolutePath": LoadImagesFromAbs
+    "UFNLoadImagesFromAbsolutePath": LoadImagesFromAbs,
+    "UFNSaveAudioToAbsolutePath": SaveAudioToAbs,
+    "UFNLoadAudioFromAbsolutePath": LoadAudioFromAbs,
+    "UFNConcatJSONArray": ConcatJSONArray,
+    "UFNArrayToJSONDict": ArrayToJSONDict
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -47,5 +55,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNLoadStringFromAbsolutePath": "UFN Load String (Absolute Path)",
     "UFNSaveImagesToAbsolutePath": "UFN Save Images (Absolute Path)",
     "UFNParseJSONArray": "UFN Parse JSON Array",
-    "UFNLoadImagesFromAbsolutePath": "UFN Load Images (Absolute Path)"
+    "UFNLoadImagesFromAbsolutePath": "UFN Load Images (Absolute Path)",
+    "UFNSaveAudioToAbsolutePath": "UFN Save Audio (Absolute Path)",
+    "UFNLoadAudioFromAbsolutePath": "UFN Load Audio (Absolute Path)",
+    "UFNConcatJSONArray": "UFN Concatenate JSON Arrays",
+    "UFNArrayToJSONDict": "UFN Array to JSON Dict"
 }

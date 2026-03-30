@@ -6,6 +6,14 @@ from PIL import Image
 
 
 class SaveImagesToAbs:
+    """
+    A node that saves a batch of images to an absolute path and returns a JSON string with the file paths and count.
+    The returned JSON string has the following format:
+    {
+        "images": ["path/to/image_00000.png", "path/to/image_00001.png", ...],
+        "count": 10
+    }
+    """
     @classmethod
     def INPUT_TYPES(s):
         return {
