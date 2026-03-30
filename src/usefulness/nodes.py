@@ -5,6 +5,7 @@ from .save_images_abs import SaveImagesToAbs
 from .parse_json_array import ParseJSONArray
 from .concat_json_array import ConcatJSONArray
 from .array_to_json_dict import ArrayToJSONDict
+from .slice_json_array import SliceJSONArray
 from .load_images_abs import LoadImagesFromAbs
 from .save_audio_abs import SaveAudioToAbs
 from .load_audio_abs import LoadAudioFromAbs
@@ -37,7 +38,8 @@ NODE_CLASS_MAPPINGS = {
     "UFNSaveAudioToAbsolutePath": SaveAudioToAbs,
     "UFNLoadAudioFromAbsolutePath": LoadAudioFromAbs,
     "UFNConcatJSONArray": ConcatJSONArray,
-    "UFNArrayToJSONDict": ArrayToJSONDict
+    "UFNArrayToJSONDict": ArrayToJSONDict,
+    "UFNSliceJSONArray": SliceJSONArray
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -59,5 +61,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNSaveAudioToAbsolutePath": "UFN Save Audio (Absolute Path)",
     "UFNLoadAudioFromAbsolutePath": "UFN Load Audio (Absolute Path)",
     "UFNConcatJSONArray": "UFN Concatenate JSON Arrays",
-    "UFNArrayToJSONDict": "UFN Array to JSON Dict"
+    "UFNArrayToJSONDict": "UFN Array to JSON Dict",
+    "UFNSliceJSONArray": "UFN Slice JSON Array"
 }
