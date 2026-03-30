@@ -4,6 +4,8 @@ import os
 import numpy as np
 from PIL import Image
 
+from ._date_wildcard import expand_date_wildcards
+
 
 class SaveImagesToAbs:
     """
@@ -32,6 +34,8 @@ class SaveImagesToAbs:
     OUTPUT_NODE = True
 
     def save_images(self, images, directory, filename_prefix):
+        directory = expand_date_wildcards(directory)
+        filename_prefix = expand_date_wildcards(filename_prefix)
         if not os.path.exists(directory):
             os.makedirs(directory, exist_ok=True)
 

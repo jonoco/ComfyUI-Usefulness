@@ -4,6 +4,8 @@ import os
 import scipy.io.wavfile
 import torch
 
+from ._date_wildcard import expand_date_wildcards
+
 
 class SaveAudioToAbs:
     """
@@ -32,6 +34,8 @@ class SaveAudioToAbs:
     OUTPUT_NODE = True
 
     def save_audio(self, audio, directory, filename_prefix):
+        directory = expand_date_wildcards(directory)
+        filename_prefix = expand_date_wildcards(filename_prefix)
         if not os.path.exists(directory):
             os.makedirs(directory, exist_ok=True)
 

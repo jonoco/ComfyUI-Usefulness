@@ -1,6 +1,9 @@
 import os
+
 import safetensors.torch
 import torch
+
+from ._date_wildcard import expand_date_wildcards
 
 
 class SaveLatentToAbs:
@@ -20,6 +23,7 @@ class SaveLatentToAbs:
     OUTPUT_NODE = True
 
     def save_latent(self, samples, latent_path):
+        latent_path = expand_date_wildcards(latent_path)
         # Ensure directory exists
         directory = os.path.dirname(latent_path)
         if directory and not os.path.exists(directory):

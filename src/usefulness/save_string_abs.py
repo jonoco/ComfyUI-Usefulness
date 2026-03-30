@@ -1,5 +1,7 @@
 import os
 
+from ._date_wildcard import expand_date_wildcards
+
 
 class SaveStringToAbs:
     @classmethod
@@ -19,6 +21,7 @@ class SaveStringToAbs:
     OUTPUT_NODE = True
 
     def save_string(self, text, file_path, append):
+        file_path = expand_date_wildcards(file_path)
         # Ensure directory exists
         directory = os.path.dirname(file_path)
         if directory and not os.path.exists(directory):
