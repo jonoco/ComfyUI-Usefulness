@@ -1,3 +1,4 @@
+import hashlib
 import os
 
 import scipy.io.wavfile
@@ -46,3 +47,7 @@ class LoadSingleAudioFromAbs:
         batch = waveform.unsqueeze(0)
 
         return ({"waveform": batch, "sample_rate": sr}, duration)
+
+    @classmethod
+    def IS_CHANGED(s, path):
+        return hashlib.sha256().digest().hex()

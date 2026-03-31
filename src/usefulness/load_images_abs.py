@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 
@@ -40,3 +41,7 @@ class LoadImagesFromAbs:
 
         batch = torch.stack(images)
         return (batch,)
+
+    @classmethod
+    def IS_CHANGED(s, path):
+        return hashlib.sha256().digest().hex()

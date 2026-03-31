@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 
@@ -59,3 +60,7 @@ class LoadAudioFromAbs:
         batch = torch.stack(waveforms)
 
         return ({"waveform": batch, "sample_rate": sample_rate},)
+
+    @classmethod
+    def IS_CHANGED(s, path):
+        return hashlib.sha256().digest().hex()
