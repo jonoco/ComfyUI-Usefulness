@@ -50,4 +50,5 @@ class LoadSingleAudioFromAbs:
 
     @classmethod
     def IS_CHANGED(s, path):
-        return hashlib.sha256().digest().hex()
+        m = hashlib.sha256()
+        return m.digest().hex()

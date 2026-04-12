@@ -13,6 +13,7 @@ from .load_images_abs import LoadImagesFromAbs
 from .save_audio_abs import SaveAudioToAbs
 from .load_audio_abs import LoadAudioFromAbs
 from .load_audio_single import LoadSingleAudioFromAbs
+from .merge_audio_with_transition import MergeAudioWithTransition
 from .save_string_abs import SaveStringToAbs
 from .load_string_abs import LoadStringFromAbs
 from .select_latent import LatentSelector
@@ -42,6 +43,7 @@ NODE_CLASS_MAPPINGS = {
     "UFNSaveAudioToAbsolutePath": SaveAudioToAbs,
     "UFNLoadAudioFromAbsolutePath": LoadAudioFromAbs,
     "UFNLoadSingleAudioFromAbsolutePath": LoadSingleAudioFromAbs,
+    "UFNMergeAudioWithTransition": MergeAudioWithTransition,
     "UFNConcatJSONArray": ConcatJSONArray,
     "UFNArrayToJSONDict": ArrayToJSONDict,
     "UFNSliceJSONArray": SliceJSONArray,
@@ -69,6 +71,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNSaveAudioToAbsolutePath": "UFN Save Audio (Absolute Path)",
     "UFNLoadAudioFromAbsolutePath": "UFN Load Audio (Absolute Path)",
     "UFNLoadSingleAudioFromAbsolutePath": "UFN Load Single Audio (Absolute Path)",
+    "UFNMergeAudioWithTransition": "UFN Merge Audio with Transition",
     "UFNConcatJSONArray": "UFN Concatenate JSON Arrays",
     "UFNArrayToJSONDict": "UFN Array to JSON Dict",
     "UFNSliceJSONArray": "UFN Slice JSON Array",
