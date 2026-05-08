@@ -22,6 +22,9 @@ from .wan_latent_loader_b import WanImageToVideoAlt
 from .pad_latent import LatentPadder
 from .concat_latent import ContatenatedLatent
 from .color_mix import GradualColorMix
+from .solid_color import SolidColorImage
+from .grayscale_color import GrayscaleColorImage
+from .adjust_mask_value import AdjustMaskValue
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -34,6 +37,9 @@ NODE_CLASS_MAPPINGS = {
     "UFNLatentPadder": LatentPadder,
     "UFNConcatLatent": ContatenatedLatent,
     "UFNGradualColorMix": GradualColorMix,
+    "UFNSolidColorImage": SolidColorImage,
+    "UFNGrayscaleColorImage": GrayscaleColorImage,
+    "UFNAdjustMaskValue": AdjustMaskValue,
     "UFNSaveLatentToAbsolutePath": SaveLatentToAbs,
     "UFNSaveStringToAbsolutePath": SaveStringToAbs,
     "UFNLoadStringFromAbsolutePath": LoadStringFromAbs,
@@ -62,6 +68,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNLatentPadder": "UFN Latent Padder",
     "UFNConcatLatent": "UFN Concatenate Latent",
     "UFNGradualColorMix": "UFN Gradual Color Mix",
+    "UFNSolidColorImage": "UFN Solid Color Image",
+    "UFNGrayscaleColorImage": "UFN Grayscale Color Image",
+    "UFNAdjustMaskValue": "UFN Adjust Mask Value",
     "UFNSaveLatentToAbsolutePath": "UFN Save Latent (Absolute Path)",
     "UFNSaveStringToAbsolutePath": "UFN Save String (Absolute Path)",
     "UFNLoadStringFromAbsolutePath": "UFN Load String (Absolute Path)",
