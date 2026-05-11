@@ -26,10 +26,6 @@ class LoadStringFromAbs:
         return (text,)
 
     @classmethod
-    def IS_CHANGED(s, file_path):
-        if not os.path.exists(file_path):
-            return ""
-        m = hashlib.sha256()
-        with open(file_path, "rb") as f:
-            m.update(f.read())
-        return m.digest().hex()
+    def IS_CHANGED(s, **kwargs):
+        import time
+        return str(time.time())

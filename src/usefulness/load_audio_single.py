@@ -49,6 +49,6 @@ class LoadSingleAudioFromAbs:
         return ({"waveform": batch, "sample_rate": sr}, duration)
 
     @classmethod
-    def IS_CHANGED(s, path):
-        m = hashlib.sha256()
-        return m.digest().hex()
+    def IS_CHANGED(s, **kwargs):
+        import time
+        return str(time.time())

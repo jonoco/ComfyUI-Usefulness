@@ -33,6 +33,6 @@ class LoadLatentFromAbs:
         return (samples, random.randint(0, 2**31 - 1))
 
     @classmethod
-    def IS_CHANGED(s, latent_path):
-        m = hashlib.sha256()
-        return m.digest().hex()
+    def IS_CHANGED(s, **kwargs):
+        import time
+        return str(time.time())

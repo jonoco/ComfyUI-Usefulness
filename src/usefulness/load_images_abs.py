@@ -43,5 +43,6 @@ class LoadImagesFromAbs:
         return (batch,)
 
     @classmethod
-    def IS_CHANGED(s, path):
-        return hashlib.sha256().digest().hex()
+    def IS_CHANGED(s, **kwargs):
+        import time
+        return str(time.time())
