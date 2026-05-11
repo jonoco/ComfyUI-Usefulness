@@ -2,7 +2,6 @@ import json
 import os
 
 import scipy.io.wavfile
-import torch
 
 from ._date_wildcard import expand_date_wildcards
 
