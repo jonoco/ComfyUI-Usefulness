@@ -1,3 +1,4 @@
+from .add_string_to_json_dict import AddStringToJSONDict
 from .adjust_mask_value import AdjustMaskValue
 from .array_to_json_dict import ArrayToJSONDict
 from .color_mix import GradualColorMix
@@ -6,6 +7,7 @@ from .concat_latent import ContatenatedLatent
 from .get_float_from_array import GetFloatFromJSONArray
 from .get_int_from_array import GetIntFromJSONArray
 from .get_string_from_array import GetStringFromJSONArray
+from .get_string_from_json_dict import GetStringFromJSONDict
 from .grayscale_color import GrayscaleColorImage
 from .load_audio_abs import LoadAudioFromAbs
 from .load_audio_single import LoadSingleAudioFromAbs
@@ -25,18 +27,11 @@ from .slice_json_array import SliceJSONArray
 from .solid_color import SolidColorImage
 from .wan_latent_loader import WanLatentImageToVideo
 from .wan_latent_loader_b import WanImageToVideoAlt
-from .pad_latent import LatentPadder
-from .concat_latent import ContatenatedLatent
-from .color_mix import GradualColorMix
-from .solid_color import SolidColorImage
-from .grayscale_color import GrayscaleColorImage
-from .adjust_mask_value import AdjustMaskValue
-from .add_string_to_json_dict import AddStringToJSONDict
-from .get_string_from_json_dict import GetStringFromJSONDict as GetStringFromJSONDictNode
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
 NODE_CLASS_MAPPINGS = {
+    "UFNAddStringToJSONDict": AddStringToJSONDict,
     "UFNAdjustMaskValue": AdjustMaskValue,
     "UFNArrayToJSONDict": ArrayToJSONDict,
     "UFNConcatJSONArray": ConcatJSONArray,
@@ -44,6 +39,7 @@ NODE_CLASS_MAPPINGS = {
     "UFNGetFloatFromJSONArray": GetFloatFromJSONArray,
     "UFNGetIntFromJSONArray": GetIntFromJSONArray,
     "UFNGetStringFromJSONArray": GetStringFromJSONArray,
+    "UFNGetStringFromJSONDict": GetStringFromJSONDict,
     "UFNGradualColorMix": GradualColorMix,
     "UFNGrayscaleColorImage": GrayscaleColorImage,
     "UFNLatentImageToVideo": WanLatentImageToVideo,
@@ -64,15 +60,11 @@ NODE_CLASS_MAPPINGS = {
     "UFNSaveStringToAbsolutePath": SaveStringToAbs,
     "UFNSliceJSONArray": SliceJSONArray,
     "UFNSolidColorImage": SolidColorImage,
-    "UFNGetStringFromJSONArray": GetStringFromJSONArray,
-    "UFNGetIntFromJSONArray": GetIntFromJSONArray,
-    "UFNGetFloatFromJSONArray": GetFloatFromJSONArray,
-    "UFNAddStringToJSONDict": AddStringToJSONDict,
-    "UFNGetStringFromJSONDict": GetStringFromJSONDictNode
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
 NODE_DISPLAY_NAME_MAPPINGS = {
+    "UFNAddStringToJSONDict": "UFN Add String to JSON Dict",
     "UFNAdjustMaskValue": "UFN Adjust Mask Value",
     "UFNArrayToJSONDict": "UFN Array to JSON Dict",
     "UFNConcatJSONArray": "UFN Concatenate JSON Arrays",
@@ -80,6 +72,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNGetFloatFromJSONArray": "UFN Get Float from JSON Array",
     "UFNGetIntFromJSONArray": "UFN Get Int from JSON Array",
     "UFNGetStringFromJSONArray": "UFN Get String from JSON Array",
+    "UFNGetStringFromJSONDict": "UFN Get String from JSON Dict",
     "UFNGradualColorMix": "UFN Gradual Color Mix",
     "UFNGrayscaleColorImage": "UFN Grayscale Color Image",
     "UFNLatentImageToVideo": "UFN Latent Image to Video",
