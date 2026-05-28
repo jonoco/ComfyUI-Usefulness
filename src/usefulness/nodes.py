@@ -25,6 +25,14 @@ from .slice_json_array import SliceJSONArray
 from .solid_color import SolidColorImage
 from .wan_latent_loader import WanLatentImageToVideo
 from .wan_latent_loader_b import WanImageToVideoAlt
+from .pad_latent import LatentPadder
+from .concat_latent import ContatenatedLatent
+from .color_mix import GradualColorMix
+from .solid_color import SolidColorImage
+from .grayscale_color import GrayscaleColorImage
+from .adjust_mask_value import AdjustMaskValue
+from .add_string_to_json_dict import AddStringToJSONDict
+from .get_string_from_json_dict import GetStringFromJSONDict as GetStringFromJSONDictNode
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -56,6 +64,11 @@ NODE_CLASS_MAPPINGS = {
     "UFNSaveStringToAbsolutePath": SaveStringToAbs,
     "UFNSliceJSONArray": SliceJSONArray,
     "UFNSolidColorImage": SolidColorImage,
+    "UFNGetStringFromJSONArray": GetStringFromJSONArray,
+    "UFNGetIntFromJSONArray": GetIntFromJSONArray,
+    "UFNGetFloatFromJSONArray": GetFloatFromJSONArray,
+    "UFNAddStringToJSONDict": AddStringToJSONDict,
+    "UFNGetStringFromJSONDict": GetStringFromJSONDictNode
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
