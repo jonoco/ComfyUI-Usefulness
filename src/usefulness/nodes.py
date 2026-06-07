@@ -12,11 +12,9 @@ from .grayscale_color import GrayscaleColorImage
 from .load_audio_abs import LoadAudioFromAbs
 from .load_audio_single import LoadSingleAudioFromAbs
 from .load_images_abs import LoadImagesFromAbs
-from .load_latent import LoadLatentFromOutput
 from .load_latent_abs import LoadLatentFromAbs
 from .load_string_abs import LoadStringFromAbs
 from .merge_audio_with_transition import MergeAudioWithTransition
-from .pad_latent import LatentPadder
 from .parse_json_array import ParseJSONArray
 from .save_audio_abs import SaveAudioToAbs
 from .save_images_abs import SaveImagesToAbs
@@ -25,8 +23,6 @@ from .save_string_abs import SaveStringToAbs
 from .select_latent import LatentSelector
 from .slice_json_array import SliceJSONArray
 from .solid_color import SolidColorImage
-from .wan_latent_loader import WanLatentImageToVideo
-from .wan_latent_loader_b import WanImageToVideoAlt
 
 # A dictionary that contains all nodes you want to export with their names
 # NOTE: names should be globally unique
@@ -42,14 +38,10 @@ NODE_CLASS_MAPPINGS = {
     "UFNGetStringFromJSONDict": GetStringFromJSONDict,
     "UFNGradualColorMix": GradualColorMix,
     "UFNGrayscaleColorImage": GrayscaleColorImage,
-    "UFNLatentImageToVideo": WanLatentImageToVideo,
-    "UFNLatentImageToVideoB": WanImageToVideoAlt,
-    "UFNLatentPadder": LatentPadder,
     "UFNLatentSelector": LatentSelector,
     "UFNLoadAudioFromAbsolutePath": LoadAudioFromAbs,
     "UFNLoadImagesFromAbsolutePath": LoadImagesFromAbs,
     "UFNLoadLatentFromAbsolutePath": LoadLatentFromAbs,
-    "UFNLoadLatentFromOutput": LoadLatentFromOutput,
     "UFNLoadSingleAudioFromAbsolutePath": LoadSingleAudioFromAbs,
     "UFNLoadStringFromAbsolutePath": LoadStringFromAbs,
     "UFNMergeAudioWithTransition": MergeAudioWithTransition,
@@ -75,14 +67,10 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNGetStringFromJSONDict": "UFN Get String from JSON Dict",
     "UFNGradualColorMix": "UFN Gradual Color Mix",
     "UFNGrayscaleColorImage": "UFN Grayscale Color Image",
-    "UFNLatentImageToVideo": "UFN Latent Image to Video",
-    "UFNLatentImageToVideoB": "UFN Latent Image to Video (Alt)",
-    "UFNLatentPadder": "UFN Latent Padder",
     "UFNLatentSelector": "UFN Latent Selector",
     "UFNLoadAudioFromAbsolutePath": "UFN Load Audio (Absolute Path)",
     "UFNLoadImagesFromAbsolutePath": "UFN Load Images (Absolute Path)",
     "UFNLoadLatentFromAbsolutePath": "UFN Load Latent (Absolute Path)",
-    "UFNLoadLatentFromOutput": "UFN Load Latent (Output)",
     "UFNLoadSingleAudioFromAbsolutePath": "UFN Load Single Audio (Absolute Path)",
     "UFNLoadStringFromAbsolutePath": "UFN Load String (Absolute Path)",
     "UFNMergeAudioWithTransition": "UFN Merge Audio with Transition",
