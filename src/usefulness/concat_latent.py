@@ -18,21 +18,23 @@ class ContatenatedLatent:
     def concat_latent(self, first_latent, second_latent):
         first_samples = first_latent["samples"]
         fist_samples_length = (first_samples.shape[2] - 1) * 4 + 1
-        print("first_samples shape:", first_samples.shape)
-        print("fist_samples_length:", fist_samples_length)
 
         second_samples = second_latent["samples"]
         second_samples_length = (second_samples.shape[2] - 1) * 4 + 1
-        print("second_samples shape:", second_samples.shape)
-        print("second_samples_length:", second_samples_length)
 
         total_length = fist_samples_length + second_samples_length
         new_length = ((total_length - 1) // 4) + 1
-        print("total_length:", total_length)
-        print("new_length:", new_length)
 
         result = torch.cat([first_samples, second_samples], dim=2)
+        print(
+            f"first_samples shape: {first_samples.shape}\n"
+            f"fist_samples_length: {fist_samples_length}\n"
+            f"second_samples shape: {second_samples.shape}\n"
+            f"second_samples_length: {second_samples_length}\n"
+            f"total_length: {total_length}\n"
+            f"new_length: {new_length}\n"
+            f"result.shape: {result.shape}"
+        )
 
-        print("Concatenated samples latent shape:", result.shape)
 
         return ({"samples": result},)
