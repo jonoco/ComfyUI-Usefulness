@@ -15,6 +15,7 @@ from .load_images_abs import LoadImagesFromAbs
 from .load_latent_abs import LoadLatentFromAbs
 from .load_string_abs import LoadStringFromAbs
 from .merge_audio_with_transition import MergeAudioWithTransition
+from .normalize_mask_value import NormalizeMaskValue
 from .parse_json_array import ParseJSONArray
 from .resample_audio import ResampleAudio
 from .save_audio_abs import SaveAudioToAbs
@@ -46,6 +47,7 @@ NODE_CLASS_MAPPINGS = {
     "UFNLoadSingleAudioFromAbsolutePath": LoadSingleAudioFromAbs,
     "UFNLoadStringFromAbsolutePath": LoadStringFromAbs,
     "UFNMergeAudioWithTransition": MergeAudioWithTransition,
+    "UFNNormalizeMaskValue": NormalizeMaskValue,
     "UFNParseJSONArray": ParseJSONArray,
     "UFNResampleAudio": ResampleAudio,
     "UFNSaveAudioToAbsolutePath": SaveAudioToAbs,
@@ -76,6 +78,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNLoadSingleAudioFromAbsolutePath": "UFN Load Single Audio (Absolute Path)",
     "UFNLoadStringFromAbsolutePath": "UFN Load String (Absolute Path)",
     "UFNMergeAudioWithTransition": "UFN Merge Audio with Transition",
+    "UFNNormalizeMaskValue": "UFN Normalize Mask Value",
     "UFNParseJSONArray": "UFN Parse JSON Array",
     "UFNResampleAudio": "UFN Resample Audio",
     "UFNSaveAudioToAbsolutePath": "UFN Save Audio (Absolute Path)",
