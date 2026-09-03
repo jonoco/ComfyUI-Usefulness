@@ -22,6 +22,7 @@ from .save_audio_abs import SaveAudioToAbs
 from .save_images_abs import SaveImagesToAbs
 from .save_latent_abs import SaveLatentToAbs
 from .save_string_abs import SaveStringToAbs
+from .save_webm_vp8_abs import SaveWebMVP8ToAbs
 from .select_latent import LatentSelector
 from .slice_json_array import SliceJSONArray
 from .solid_color import SolidColorImage
@@ -54,6 +55,7 @@ NODE_CLASS_MAPPINGS = {
     "UFNSaveImagesToAbsolutePath": SaveImagesToAbs,
     "UFNSaveLatentToAbsolutePath": SaveLatentToAbs,
     "UFNSaveStringToAbsolutePath": SaveStringToAbs,
+    "UFNSaveVP8WebMToAbsolutePath": SaveWebMVP8ToAbs,
     "UFNSliceJSONArray": SliceJSONArray,
     "UFNSolidColorImage": SolidColorImage,
 }
@@ -85,6 +87,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "UFNSaveImagesToAbsolutePath": "UFN Save Images (Absolute Path)",
     "UFNSaveLatentToAbsolutePath": "UFN Save Latent (Absolute Path)",
     "UFNSaveStringToAbsolutePath": "UFN Save String (Absolute Path)",
+    "UFNSaveVP8WebMToAbsolutePath": "UFN Save VP8 WebM with Audio (Absolute Path)",
     "UFNSliceJSONArray": "UFN Slice JSON Array",
     "UFNSolidColorImage": "UFN Solid Color Image",
 }

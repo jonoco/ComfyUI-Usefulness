@@ -1,5 +1,5 @@
 import re
-from datetime import datetime, timezone
+from datetime import datetime
 
 
 # Ordered longest-first to avoid partial token replacement (e.g. 'MM' before 'M')
@@ -22,14 +22,14 @@ def _convert_format(fmt: str) -> str:
 
 
 def expand_date_wildcards(path: str) -> str:
-    """Replace all ``%date:FORMAT%`` wildcards in *path* with the current UTC time.
+    """Replace all ``%date:FORMAT%`` wildcards in *path* with the local machine time.
 
     Example::
 
         expand_date_wildcards("/output/%date:yyyy-MM-dd-hhmmss%/file.txt")
         # -> "/output/2026-03-28-191501/file.txt"
     """
-    now = datetime.now(timezone.utc)
+    now = datetime.now()
 
     def _replace(match: re.Match) -> str:
         fmt = _convert_format(match.group(1))
