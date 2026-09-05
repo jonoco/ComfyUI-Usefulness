@@ -7,7 +7,7 @@ Usefulness is a ComfyUI custom node pack with utility nodes for JSON, strings, m
 Clone this repository into your ComfyUI `custom_nodes` directory:
 
 ```bash
-git clone https://github.com/jonoco/usefulness.git
+git clone https://github.com/jonoco/comfyui-usefulness.git
 ```
 
 If you are using ComfyUI Manager, install it from the manager.
